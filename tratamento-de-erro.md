@@ -55,11 +55,25 @@ Se quiser fazer isso funcionar use var que permite acesso global para definir a 
     }
 
 
-###  🩻 Reference Error: 
+###  🩻 Reference Error: Unexpected token " , "   vai mostrar também o espaço entre vírgulas vazio
 
-🔎 O que significa: 
+🔎 O que significa: Quando passar os parâmetros dentro dos parênteses de uma função, o valor vazio deve ser passado no final, não pode ser passado no início ou no meio. E quando definir parâmetros padrões em escopo global - na falta de passagem de parâmetro no escopo global para sobrescrever, também é de boa prática colocar no final do espaço dentro dos parênteses.
 
 🛠 Como resolver: 
+
+    torrar("pão na chapa" , , 10.90)
+   
+    function torrar(pedido, nome = "cliente", valor){
+      console.log("Nome do cliente: " + "valor do pedido: " + "pedido: ", nome, valor, pedido)
+    }
+
+Colocando na posição correta:
+
+    torrar("pão na chapa" , 10.90)  <--- perceba que não há encontro de vírgulas, pois não há o que separar!
+   
+    function torrar(pedido, valor, nome = "cliente"){
+      console.log("Nome do cliente: " + "valor do pedido: " + "pedido: ", nome, valor, pedido)
+    }
 
 
 ###  🩻 Reference Error: 
