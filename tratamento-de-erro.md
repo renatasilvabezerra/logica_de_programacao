@@ -26,9 +26,10 @@ Se eu der um outro console.log fora do escopo, dará esse erro de variável não
 
     torrar("pão de forma")
     function torrar(pao){
+      let nome = "Renata"
       console.log("torrada feita com " + pao)
     }
-    console.log(pao)
+    console.log(nome)
 
 
 
