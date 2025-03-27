@@ -33,12 +33,26 @@ Se eu der um outro console.log fora do escopo, dará esse erro de variável não
 
 
 
-###  🩻 Reference Error: 
+###  🩻 Reference Error: Cannot access 'variável' before initialization
 
-🔎 O que significa: 
+🔎 O que significa: O programa não entendeu que a variável chamada tem valor atribuído, pois a variável foi chamada antes da inicialização ( let deve ser usado dentro do seu escopo local). 
 
 🛠 Como resolver: 
 
+    torrar()
+    let nome = "Renata"
+    function torrar(){
+      console.log(nome)
+    }
+    
+Se quiser fazer isso funcionar use var que permite acesso global para definir a variável e lá dentro da função, atribua o valor.
+
+    torrar()
+    var nome 
+    function torrar(){
+      nome = "Renata"
+      console.log(nome)
+    }
 
 
 ###  🩻 Reference Error: 
